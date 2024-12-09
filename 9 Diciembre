@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdbool.h>
+#define MAX 5
+int main (){
+	int origen[MAX] ={10,15,18,21,99};
+	int destino[MAX] ={10,15,18,21,99};
+	bool flag;
+	
+	int i;
+	
+	flag=true;
+	for (i=0; i<MAX; i++){
+		if (origen [i]== destino[i])
+			flag =flag&&true;
+		else
+		flag =flag&&false;
+	}
+	printf("resultado de la compra de vectores: %s", flag? "iguales": "diferentes");
+	return 1;
+}
