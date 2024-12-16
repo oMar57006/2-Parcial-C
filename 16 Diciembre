@@ -80,3 +80,20 @@ int main(){
 	printf("Nombre completo: %s\n", nombre);
 	return 1;
 }
+
+
+/_______________________________________CADENA SE COMPARA A LA SEGUNDA CADENA___________________________________________________________/
+
+#include <stdio.h>
+#include <string.h>
+int main(){
+	char cadena1[21]="Daniel";
+	char cadena2[21]="Daniel";
+	
+	if (strcmp(cadena1,cadena2)==0)
+	printf("Son iguales\n");
+	strcpy(cadena2, "Noboa");
+	if (strcmp(cadena1,cadena2) !=0)
+	printf ("ahora son diferentes\n");
+	return 1;
+}
