@@ -1,0 +1,82 @@
+/_________________________________________FORMATO PARA LEER NOMBRE______________________________________________________/
+#include <stdio.h>
+int main (){
+	char nombre[21];
+	printf("ingresa tu nombre: ");
+	scanf("%s", nombre);
+	printf("Hola %s, bienvenido\n", nombre);
+	return 1;
+}
+
+
+/_________________________________FORMATO PARA LEER NOMBRE Y APELLIDO (EL ESPACIO CUENTA)_________________________________/
+#include <stdio.h>
+int main (){
+	char nombre[21];
+	printf("ingresa tu nombre: ");
+	fflush(stdin);
+	gets(nombre);
+	printf("Hola %s, bienvenido\n", nombre);
+	return 1;
+}
+
+/___________________________// FUNCION USADA EN ESTE COGIDO //__________________________/
+
+//gets();                               //lee lo siguiente del espacio
+//fflush(stdin);                        //limpia pantalla para que no se vaya de largo
+
+/____________________________________________________________________________________________________________________________/
+
+char nombre [6];
+char saludo[5];
+
+//Si el nombre que pone el usuario es mayor que 6 letras, este lo remplaza por saludo y da error
+
+/_____________________________________MUESTRA LA LONGITUD DE LA CADENA______________________________________________________________/
+#include <stdio.h>
+#include <string.h>
+int main (){
+	char nombre[21];
+	printf("ingresa tu nombre: ");
+	gets(nombre);
+	printf("Hola %s, bienvenido\n", nombre);
+	
+	//_____________________________//
+	int longitud;
+	longitud= strlen(nombre);
+	printf("la longitud de la cadena es %d\n", longitud);
+	
+	//______________________//
+	//cantidad de bytes en memoria asignados a una
+	//variable o tipo de dato
+	printf("sizeof de nombre %d\n", sizeof (nombre));
+	return 1;
+}
+
+/_______________________________________CADENA SE COPIA A LA SEGUNDA CADENA___________________________________________________________/
+#include <stdio.h>
+#include <string.h>
+int main(){
+	char origen[21]="Hola";
+	char destino[21]="Mundo";
+	
+	//Copia de una cadena de origen al destino
+	strcpy(destino, origen);
+	printf("cadena origen %s\n", origen);
+	printf("cadena destino %s\n", destino);
+	return 1;
+}
+
+/_______________________________________CADENA SE UNE A LA SEGUNDA CADENA___________________________________________________________/
+
+#include <stdio.h>
+#include <string.h>
+int main(){
+	char nombre[21]="Daniel";
+	char apellido[21]="Noboa";
+	
+	strcat(nombre, " ");
+	strcat(nombre, apellido);
+	printf("Nombre completo: %s\n", nombre);
+	return 1;
+}
