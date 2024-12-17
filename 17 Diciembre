@@ -49,5 +49,7 @@ int main (){
 	printf("Tamaño de Struct Persona %d\n", sizeof(struct Persona));
 	printf("Tamaño de Struct est1 %d\n", sizeof(est1));
 	printf("Tamaño de Struct est2 %d\n", sizeof(est2));
+	printf("Tamaño de int %d\n", sizeof(int));
+	printf("Tamaño de edad %d\n", sizeof(est1.edad));
 	return 1;
 }
