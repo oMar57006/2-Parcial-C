@@ -1,0 +1,22 @@
+#include <stdio.h>
+struct Campo{
+	int codigo, precio;
+	char nombre[20];
+};
+struct Registro{
+     struct Campo campoR0;
+};
+int main(){
+struct Registro est1;
+printf("ingresar nombre del producto\n");
+gets(est1.campoR0.nombre);
+printf("ingresa el precio del producto\n");
+scanf("%d", &est1.campoR0.precio);
+printf("ingresar codigo\n");
+scanf("%d",&est1.campoR0.codigo);
+printf("---------------------\n");
+printf("los datos ingresados son\n "); 
+printf("Nombre   : %s\n", est1.campoR0.nombre);
+printf("Codigo   : %d\n", est1.campoR0.codigo);
+printf("Precio   : %d\n", est1.campoR0.precio);
+}
