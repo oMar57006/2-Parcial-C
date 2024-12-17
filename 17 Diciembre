@@ -1,0 +1,53 @@
+////(_______________________________Estructuras__________________)////
+
+#include <stdio.h>
+struct Fecha{
+	int dia, mes, anio;
+};
+
+struct Persona{
+	char nombre[15];
+	char apellido[15];
+	int edad;
+	struct Fecha fechaNac;
+};
+
+int main (){
+	struct Persona est1;
+	printf("Ingrese su nombre: ");
+	gets (est1.nombre);
+	printf("Ingrese su apellido: ");
+	gets (est1.apellido);
+	printf ("Ingrese el dia de su nacimiento: ");
+	scanf("%d", &est1.fechaNac.dia);
+	printf ("Ingrese el mes de su nacimiento: ");
+	scanf("%d", &est1.fechaNac.mes);
+	printf("Ingrese el anio de su nacimiento: ");
+	scanf("%d", &est1.fechaNac.anio);
+	printf("Ingrese su edad: ");
+	scanf("%d", &est1.edad);
+	
+	printf("_____________________________________\n");
+	printf("Los datos ingresados son: \n");
+	printf("Nombre   : %s\n", est1.nombre);
+	printf("Apellido : %s\n", est1.apellido);
+	printf("Edad     : %d\n", est1.edad);
+	printf("Fecha Nac: %d /%d /%d \n", est1.fechaNac.dia,
+									est1.fechaNac.mes,
+									est1.fechaNac.anio);
+	
+	printf("_____________________________________\n");
+	struct Persona est2;
+	est2 = est1;
+	printf("Nombre   : %s\n", est1.nombre);
+	printf("Apellido : %s\n", est1.apellido);
+	printf("Edad     : %d\n", est1.edad);
+	printf("Fecha Nac: %d /%d /%d \n", est1.fechaNac.dia,
+									est1.fechaNac.mes,
+									est1.fechaNac.anio);
+	printf("_____________________________________\n");
+	printf("Tamaño de Struct Persona %d\n", sizeof(struct Persona));
+	printf("Tamaño de Struct est1 %d\n", sizeof(est1));
+	printf("Tamaño de Struct est2 %d\n", sizeof(est2));
+	return 1;
+}
