@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main (){
+	int a=10, b=15, c=9;
+	int *ptrA=NULL, *ptrB=NULL, *ptrC=NULL;
+	
+	printf("Ingrese el valor de a: ");
+	scanf("%d", &a);
+	printf("Ingrese el valor de b: ");
+	scanf("%d", &b);
+	
+	ptrA =&a;
+	ptrB =&b;
+	ptrC =&c;
+	
+	*ptrC = *ptrA + *ptrB;
+	printf("El valor de c es %d\n");
+	return 1;
+}
