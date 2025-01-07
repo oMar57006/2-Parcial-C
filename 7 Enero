@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main(){
+	int a, b, c, d;
+	int *ptrA=NULL, *ptrB=NULL, *ptrC=NULL, *ptrD=NULL;
+	printf("ingresar valores de a ");
+	scanf("%d",&a);
+	printf("ingresar valores de b ");
+	scanf("%d",&b);
+	printf("ingresar valores de c ");
+	scanf("%d",&c);
+	printf("ingresar valores de d ");
+	scanf("%d",&d);
+	ptrA=&a;
+	ptrB=&b;
+	ptrC=&c;
+	ptrD=&d;
+	
+	*ptrD= (*ptrA + *ptrB) / *ptrC;
+	printf("El valor de d es %d\n",d);
+	
+}
+
+/__________________Ejercicio 2_________________________/
+
+#include <stdio.h>
+
+int main (){
+	char nombre[10] = "HOLA";
+	char *ptrLetra;
+	
+	//inicializa el puntero con la dirección del primer elemento
+	//de la cadena
+	ptrLetra = nombre;
+	while (*ptrLetra !='\0'){
+		printf("%c\n", *ptrLetra);
+		ptrLetra++;
+	}
+	return 1;
+}
