@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int ejempoPorValor(int *a, int *b);
+int ejemploPorValor (int *a, int *b){
+
+	*a = *a + 5;
+	*b = *b + *a;
+	return *a * *b;
+}
+
+int main (){
+	int a=5, b=10, c;
+	c = ejemploPorValor(&a,&b);
+	printf("a=%d, b=%d, c=%d", a, b, c);
+	return 1;
+}
+
+
+//_____________________________________EJERCICIO 2_______________________________________//
+
+#include <stdio.h>
+struct Persona{
+	char nombre [20];
+	int edad;
+};
+
+struct Persona LeerDatos();
+
+struct Persona LeerDatos(){
+
+	struct Persona p;
+	printf("Ingrese nombre: ");
+	gets(p.nombre);
+	printf("Ingrese edad");
+	scanf("%d", &p.edad);
+	return p;
+}
+
+int main (){
+	struct Persona per;
+	per = LeerDatos();
+	return 1;
+}
