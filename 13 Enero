@@ -18,6 +18,7 @@ int main (){
 
 //_____________________________________EJERCICIO 2_______________________________________//
 
+
 #include <stdio.h>
 struct Persona{
 	char nombre [20];
@@ -31,13 +32,19 @@ struct Persona LeerDatos(){
 	struct Persona p;
 	printf("Ingrese nombre: ");
 	gets(p.nombre);
-	printf("Ingrese edad");
+	printf("Ingrese edad: ");
 	scanf("%d", &p.edad);
 	return p;
+}
+
+void MostrarDatos(struct Persona p){
+	printf("Mostrando sus datos\n");
+	printf("Nombre: %s, edad: %d", p.nombre, p.edad);
 }
 
 int main (){
 	struct Persona per;
 	per = LeerDatos();
+	MostrarDatos(per);
 	return 1;
 }
